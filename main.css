@@ -6,7 +6,14 @@ html, body {
     background-color: #000000;
     color: #ffffff;
 }
-
+body::-webkit-scrollbar{
+    background:none;
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #ce3535;
+    border-radius: 10px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -22,7 +29,7 @@ header {
     box-sizing: border-box;
   
     background-size: 300% 300%;
-    background-image: linear-gradient(-45deg, rgb(237, 46, 28) 20%, rgb(242, 3, 3) 25%, rgb(223, 44, 44) 21%, #f50202 34%);
+    background-image: linear-gradient(-45deg, rgb(213, 178, 175) 20%, rgb(230, 185, 185) 25%, rgb(223, 113, 44) 21%, #f50202 14%);
     -webkit-animation: AnimateBG 7s ease infinite;
             animation: AnimateBG 7s ease infinite;
   }

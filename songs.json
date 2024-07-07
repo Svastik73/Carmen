@@ -2,7 +2,7 @@
     "songs":[{
         "id": "1",
              "name": "Hurricane",
-             "path": "music/hurricane.mp3",
+             "path": "music/Hurricane.mp3",
              "img": "img/hurricane.webp",
              "singer": "Eden Golan",
              "genre": ""

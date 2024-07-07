@@ -47,27 +47,31 @@
     background-color: #f2f2f2; /* Light gray on hover */
 }
 
-.music-player {
+#music-player {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background-color: inherit; /* White background for player */
+    margin-left: 500px;
+    width: 370px;
+    background-color: inherit;
     z-index: 1000;
     text-align: center;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for separation */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 
-
-.music-player {
-    max-width: 800px; /* Adjust the width as per your design */
-    margin-left: 250px;
+#banneri {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 10000;
+    opacity: 0.8;
 }
 
 #audio-player {
     width: 100%;
 }
+
 
 /* Additional control styles */
 #audio-player::-webkit-media-controls-panel {
@@ -88,3 +92,4 @@
 #audio-player::-webkit-media-controls-time-remaining-display {
     flex: 0 0 auto;
 }
+
