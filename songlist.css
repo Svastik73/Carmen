@@ -1,0 +1,90 @@
+
+.song-list {   /*   This makes black screen behind white box hehe :)*/
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 2000;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.song-list-content { /* here the content will be shown*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #000000;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* White background for song list */
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%; /* Limit the maximum height for better visibility */
+    overflow-y: auto; /* Enable scrolling within the content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.song-list-content h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#songs {
+    list-style: none;
+    padding: 0;
+}
+
+#songs li {
+    margin: 0.5rem 0;
+    cursor: pointer;
+    color: #000000;
+    text-align: center;
+}
+
+#songs li:hover {
+    background-color: #f2f2f2; /* Light gray on hover */
+}
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: inherit; /* White background for player */
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow for separation */
+}
+
+
+
+.music-player {
+    max-width: 800px; /* Adjust the width as per your design */
+    margin-left: 250px;
+}
+
+#audio-player {
+    width: 100%;
+}
+
+/* Additional control styles */
+#audio-player::-webkit-media-controls-panel {
+    width: 100%;
+}
+
+/* Add custom controls (e.g., fast forward) */
+#audio-player::-webkit-media-controls-enclosure {
+    display: flex;
+    justify-content: space-between;
+}
+
+#audio-player::-webkit-media-controls-timeline {
+    flex: 1;
+}
+
+#audio-player::-webkit-media-controls-current-time-display,
+#audio-player::-webkit-media-controls-time-remaining-display {
+    flex: 0 0 auto;
+}

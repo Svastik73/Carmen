@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="songlist.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🎵</div>
+            <h1 style="font-family:monospace"> Carmen     </h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." style="border-radius: 10px; outline: none;margin-left: 15px;">
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="side-menu">
+                <ul>
+                    <li><a href="#albums">Albums</a></li>
+                    <li><a href="#singers">Singers</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><button class="ilo" style="width: 80px;height: 40px; font-family: cursive; border: none;border-radius: 10px; font-size: large;">Login</button></li>
+                </ul>
+            </div>
+            <main>
+                <section id="albums" class="section">
+                    <h2>Albums</h2>
+                    <div class="albums">
+                        <div class="album-item" onclick="showSongs('Eurovision 2024')">
+                            <img src="image/euro2024/malmo_2024_logo_7-1280x720.png" alt="Eurovision 2024" style="height: 150px;width:165px">
+                            <p>Eurovision 2024</p>
+                        </div>
+                        <div class="album-item" onclick="showSongs('Album 2')">
+                            <img src="album2.jpg" alt="Album 2">
+                            <p>Album 2</p>
+                        </div>
+                       
+                    </div>
+                </section>
+                <section id="singers" class="section">
+                    <h2>Singers</h2>
+                    <div class="singers">
+                        <div class="singer-item">
+                            <img src="singer1.jpg" alt="Singer 1">
+                            <p>Singer 1</p>
+                        </div>
+                        <div class="singer-item">
+                            <img src="singer2.jpg" alt="Singer 2">
+                            <p>Singer 2</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="trending" class="section">
+                    <h2>Trending</h2>
+                    <div class="trending">
+                        <div class="trending-item">
+                            <img src="trending1.jpg" alt="Trending 1">
+                            <p>Trending 1</p>
+                        </div>
+                        <div class="trending-item">
+                            <img src="trending2.jpg" alt="Trending 2">
+                            <p>Trending 2</p>
+                        </div>
+                    </div>
+                </section>
+                <div id="song-list" class="song-list">
+                    <div class="song-list-content">
+                        <h3 id="album-title">Album Songs</h3>
+                        <ul id="songs">
+                            <!-- Song items will be dynamically added here -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="music-player" class="music-player">
+                    <audio id="audio-player" controls>
+                        <!-- Audio source will be dynamically set here -->
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; 2024 Music Streaming</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

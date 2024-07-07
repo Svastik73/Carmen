@@ -1,0 +1,63 @@
+{
+    "songs":[{
+        "id": "1",
+             "name": "Hurricane",
+             "path": "music/hurricane.mp3",
+             "img": "img/hurricane.webp",
+             "singer": "Eden Golan",
+             "genre": ""
+        },
+        {
+                     "id": "2",
+             "name": "The code",
+             "path": "music/thecode.mp3",
+             "img": "img/thecode.webp",
+             "singer": "Nemo",
+             "genre": "Pop"    
+        },
+        {
+            "id": "3",
+    "name": "Zari",
+    "path": "music/zari.mp3",
+    "img": "img/thecode.webp",
+    "singer": "Marina Satti",
+    "genre": "Pop"
+   
+},
+{
+    "id": "4",
+"name": "Doomsday Blue",
+"path": "music/thecode.mp3",
+"img": "img/thecode.webp",
+"singer": "Bambie Thug",
+"genre": "Contempory"
+
+},
+{
+    "id": "5",
+"name": "Teresa and Maria",
+"path": "music/thecode.mp3",
+"img": "img/thecode.webp",
+"singer": "Alyona Alyona and Jerry heil",
+"genre": "Pop"
+},
+{
+    "id": "6",
+"name": "Rim tim tagi dim",
+"path": "music/thecode.mp3",
+"img": "img/thecode.webp",
+"singer": "Baby Lasagna",
+"genre": "Pop"
+
+},
+{
+    "id": "7",
+"name": "Özünlə Apar",
+"path": "music/thecode.mp3",
+"img": "img/thecode.webp",
+"singer": "FAHREE feat. Ilkin Dovlatov",
+"genre": "Pop"
+
+}
+    ]  
+ }

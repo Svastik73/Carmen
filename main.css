@@ -1,0 +1,208 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+  
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, rgb(237, 46, 28) 20%, rgb(242, 3, 3) 25%, rgb(223, 44, 44) 21%, #f50202 34%);
+    -webkit-animation: AnimateBG 7s ease infinite;
+            animation: AnimateBG 7s ease infinite;
+  }
+  
+  @-webkit-keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /*
+header {
+    width: 100%;
+    background: linear-gradient(to right, #f47d14,#c76c6c, #6cc7c7,#f16de8, #a5e41c);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: #000000;
+} */
+
+
+header .logo {
+    font-size: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    
+        font-family:'Courier New', Courier, monospace;
+        background: linear-gradient(to right, #000101, #020700);
+        -webkit-background-clip: text; /* For Safari/Chrome/iOS */
+        background-clip: text;
+        color: transparent;
+        
+    
+}
+
+header .search-bar input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.side-menu {
+    width: 200px;
+    background-color: #333333;
+    padding-top: 2rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.side-menu ul li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.side-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.side-menu ul li a:hover {
+    color: #FF2D55; /* Apple Music pink */
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #FF2D55; /* Apple Music pink */
+}
+
+.albums {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Optional: Enables smooth scrolling on iOS */
+    margin-bottom: 1rem;
+}
+.albums::-webkit-scrollbar{
+    background-color: #000000;
+    border-radius: 10px;
+    height: 2px;
+}
+.albums::-webkit-scrollbar-thumb{
+    height: 2px;
+    background-color: #c63f58;
+    border-radius: 5px;
+    
+}
+.album-item {
+    flex: 0 0 auto; /* Ensure items do not grow or shrink */
+    margin-right: 1rem; /* Add space between items */
+    text-align: center;
+    cursor: pointer;
+}
+
+.album-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 45, 85, 0.5); /* Apple Music pink shadow */
+    transition: transform 0.3s;
+}
+
+.album-item img:hover {
+    transform: scale(1.1);
+}
+
+.singers, .trending {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.singer-item, .trending-item {
+    flex: 1 1 150px; /* Adjust the width to fit your design */
+    margin: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.singer-item img, .trending-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 45, 85, 0.5); /* Apple Music pink shadow */
+    transition: transform 0.3s;
+}
+
+.singer-item img:hover, .trending-item img:hover {
+    transform: scale(1.1);
+}
