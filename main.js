@@ -19,7 +19,7 @@ if(albumTitle=='Eurovision 2024'){
 }
 else if(albumTitle=='GTA')
 {
-    const songs = ['Lady Hear Me tonight','Radio Gaga'];
+    const songs = ['Lady Hear Me Tonight','Radio Gaga'];
     const lang=['Modjo','Queen'];
   
     songs.forEach((song, index) => {
