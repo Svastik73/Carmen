@@ -67,29 +67,47 @@
     z-index: 10000;
     opacity: 0.8;
 }
+#audio-container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    background: linear-gradient(to right, red, white);
+    opacity: 0.8;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
 
 #audio-player {
-    width: 100%;
+    flex: 1; /* Take up remaining space */
+    margin-left: 10px; /* Add spacing between image and audio player */
 }
 
-
-/* Additional control styles */
-#audio-player::-webkit-media-controls-panel {
-    width: 100%;
+#audio-container img {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    opacity: 0.8;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Add custom controls (e.g., fast forward) */
-#audio-player::-webkit-media-controls-enclosure {
+.song-details {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-#audio-player::-webkit-media-controls-timeline {
-    flex: 1;
+.song-details h3 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 10px; /* Add spacing between image and text */
 }
 
-#audio-player::-webkit-media-controls-current-time-display,
-#audio-player::-webkit-media-controls-time-remaining-display {
-    flex: 0 0 auto;
+.audio-controls {
+    display: flex;
+    gap: 10px;
 }
 
+.audio-controls button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
