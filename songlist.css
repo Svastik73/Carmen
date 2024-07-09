@@ -75,7 +75,7 @@
     background-size: 300% 300%;
     -webkit-animation: AnimateBG 5s ease infinite;
     animation: AnimateBG 5s ease infinite;
-        border-radius: 4px;
+        border-radius: 25px;
         overflow: hidden;
     }
 @-webkit-keyframes AnimateBG {
