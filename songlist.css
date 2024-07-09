@@ -63,7 +63,7 @@
 #banneri {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
     z-index: 10000;
     opacity: 0.8;
 }
@@ -75,7 +75,7 @@
     background-size: 300% 300%;
     -webkit-animation: AnimateBG 5s ease infinite;
     animation: AnimateBG 5s ease infinite;
-        border-radius: 10px;
+        border-radius: 4px;
         overflow: hidden;
     }
 @-webkit-keyframes AnimateBG {
