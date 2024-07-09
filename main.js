@@ -8,7 +8,7 @@ if(albumTitle=='Eurovision 2024'){
     // Add songs dynamically (for demo purposes, you can replace with your data)
     const songs = ['Hurricane', 'Zari', 'The code','Doomsday Blue','Rim Tim Tagi Dim','Teresa and Maria','Mon amour','Europapa','Jako','Özünlə Apar','La Noia'];
     const lang=['English','Greek','English','English','English','Ukranian','French','Dutch','Armenian','Azerbaijani','Italian'];
-  
+   
     songs.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} -  (${lang[index]})`;
@@ -19,14 +19,25 @@ if(albumTitle=='Eurovision 2024'){
 }
 else if(albumTitle=='GTA')
 {
-    const songs = ['Lady Hear Me Tonight','Radio Gaga'];
-    const lang=['Modjo','Queen'];
+    const songs = ['Lady Hear Me Tonight','Radio Gaga','Music Sounds Better With You'];
+    const lang=['Modjo','Queen','Stardust'];
   
     songs.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} - by ${lang[index]}`;
         
         li.addEventListener('click', () => playSong(song,lang[index])); // Pass song title to playSong function 
+        songsList.appendChild(li);
+    });
+}
+else if(albumTitle=='Euro 2019'){
+    const eur219=['She Got Me', "Toy","Arcade","Truth"]
+    const art=['- Luca Hänni ',"- Netta","- Duncan Laurence","- Chingiz Mustafayev"]
+    eur219.forEach((song, index) => {
+        let li=document.createElement('li');
+        li.textContent = `${song} - by ${art[index]}`;
+        
+        li.addEventListener('click', () => playSong(song,art[index])); // Pass song title to playSong function 
         songsList.appendChild(li);
     });
 }

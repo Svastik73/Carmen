@@ -213,3 +213,12 @@ main {
 .singer-item img:hover, .trending-item img:hover {
     transform: scale(1.1);
 }
+
+.ilo{
+    color: #f50202;
+}
+.ilo:hover{
+    background: #f50202;
+    color: #ffffff;
+
+}
