@@ -69,12 +69,12 @@
 }
  #audio-player {
         width: 100%;
-        background: linear-gradient(to right, red, white);
+        
         opacity: 0.9;
       background: linear-gradient(-45deg, rgb(213, 178, 175) 20%, rgb(230, 185, 185) 25%, rgb(223, 113, 44) 21%, #f50202 14%);
     background-size: 300% 300%;
-    -webkit-animation: AnimateBG 7s ease infinite;
-    animation: AnimateBG 7s ease infinite;
+    -webkit-animation: AnimateBG 5s ease infinite;
+    animation: AnimateBG 5s ease infinite;
         border-radius: 10px;
         overflow: hidden;
     }
