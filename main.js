@@ -19,8 +19,8 @@ if(albumTitle=='Eurovision 2024'){
 }
 else if(albumTitle=='GTA')
 {
-    const songs = ['Lady Hear Me Tonight','Radio Gaga','Music Sounds Better With You'];
-    const lang=['Modjo','Queen','Stardust'];
+    const songs = ['Lady Hear Me Tonight','Radio Gaga','Music Sounds Better With You','Moves Like Jagger','The Setup','I Want It That Way','Midnight City'];
+    const lang=['Modjo','Queen','Stardust','Maroon 5','Favoured Nations','Backstreet Boys','M83'];
   
     songs.forEach((song, index) => {
         let li=document.createElement('li');
