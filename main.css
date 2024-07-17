@@ -6,14 +6,17 @@ html, body {
     background-color: #000000;
     color: #ffffff;
 }
-body::-webkit-scrollbar{
-    background:none;
+
+body::-webkit-scrollbar {
+    background: none;
     width: 6px;
 }
-body::-webkit-scrollbar-thumb{
+
+body::-webkit-scrollbar-thumb {
     background-color: #ce3535;
     border-radius: 10px;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -27,48 +30,35 @@ header {
     justify-content: space-between;
     padding: 1rem;
     box-sizing: border-box;
-  
     background-size: 300% 300%;
     background-image: linear-gradient(-45deg, rgb(213, 178, 175) 20%, rgb(230, 185, 185) 25%, rgb(223, 113, 44) 21%, #f50202 14%);
     -webkit-animation: AnimateBG 7s ease infinite;
-            animation: AnimateBG 7s ease infinite;
-  }
-  
-  @-webkit-keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  @keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  /*
-header {
-    width: 100%;
-    background: linear-gradient(to right, #f47d14,#c76c6c, #6cc7c7,#f16de8, #a5e41c);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    box-sizing: border-box;
-    color: #000000;
-} */
+    animation: AnimateBG 7s ease infinite;
+}
 
+@-webkit-keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 header .logo {
     font-size: 2rem;
@@ -77,14 +67,11 @@ header .logo {
 header h1 {
     margin: 0;
     font-size: 1.5rem;
-    
-        font-family:'Courier New', Courier, monospace;
-        background: linear-gradient(to right, #000101, #020700);
-        -webkit-background-clip: text; /* For Safari/Chrome/iOS */
-        background-clip: text;
-        color: transparent;
-        
-    
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to right, #000101, #020700);
+    -webkit-background-clip: text; /* For Safari/Chrome/iOS */
+    background-clip: text;
+    color: transparent;
 }
 
 header .search-bar input {
@@ -103,7 +90,7 @@ header .search-bar input {
     width: 200px;
     background-color: #333333;
     padding-top: 2rem;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -150,41 +137,61 @@ main {
     margin-bottom: 1rem;
     color: #FF2D55; /* Apple Music pink */
 }
-
+p{
+    font-family:"Poppins";
+}
 .albums {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Optional: Enables smooth scrolling on iOS */
     margin-bottom: 1rem;
 }
-.albums::-webkit-scrollbar{
+
+.albums::-webkit-scrollbar {
     background-color: #000000;
     border-radius: 10px;
     height: 2px;
 }
-.albums::-webkit-scrollbar-thumb{
+
+.albums::-webkit-scrollbar-thumb {
     height: 2px;
     background-color: #c63f58;
     border-radius: 5px;
-    
 }
+
 .album-item {
     flex: 0 0 auto; /* Ensure items do not grow or shrink */
     margin-right: 1rem; /* Add space between items */
     text-align: center;
     cursor: pointer;
+    position: relative; /* Needed for positioning the play button */
 }
 
 .album-item img {
     width: 150px;
     height: 150px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 45, 85, 0.5); /* Apple Music pink shadow */
-    transition: transform 0.3s;
+    transition: opacity 0.3s;
 }
 
-.album-item img:hover {
-    transform: scale(1.1);
+.album-item:hover img {
+    opacity: 0.7; /* Makes the image slightly opaque */
+}
+
+.album-item .play-button {
+    position: absolute;
+    top: 60%;
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    font-size: 2rem;
+    color: white;
+    opacity: 0.7;
+}
+
+.album-item:hover .play-button {
+    display: block; /* Show the play button on hover */
 }
 
 .singers, .trending {
@@ -200,25 +207,40 @@ main {
     margin: 1rem;
     text-align: center;
     box-sizing: border-box;
+    position: relative; /* Needed for positioning the play button */
 }
 
 .singer-item img, .trending-item img {
     width: 150px;
     height: 150px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 45, 85, 0.5); /* Apple Music pink shadow */
-    transition: transform 0.3s;
+    transition: opacity 0.3s;
 }
 
-.singer-item img:hover, .trending-item img:hover {
-    transform: scale(1.1);
+.singer-item:hover img, .trending-item:hover img {
+    opacity: 0.7; /* Makes the image slightly opaque */
 }
 
-.ilo{
+.singer-item .play-button, .trending-item .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    font-size: 2rem;
+    color: white;
+    opacity: 0.7;
+}
+
+.singer-item:hover .play-button, .trending-item:hover .play-button {
+    display: block; /* Show the play button on hover */
+}
+
+.ilo {
     color: #f50202;
 }
-.ilo:hover{
+
+.ilo:hover {
     background: #f50202;
     color: #ffffff;
-
 }
