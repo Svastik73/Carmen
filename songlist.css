@@ -61,11 +61,19 @@
 
 
 #banneri {
+   translate: none; 
     max-width: 100%;
     height: auto;
     border-radius: 12px;
     z-index: 10000;
     opacity: 0.8;
+    
+    transition: opacity 0.5s ease;
+    visibility: visible; /* Initial visibility */
+}
+
+#banneri.hidden {
+    visibility: hidden; /* Hide the image */
 }
  #audio-player {
         width: 100%;
@@ -125,3 +133,5 @@
     #audio-player::-webkit-media-controls-time-remaining-display {
         flex: 0 0 auto;
     }
+
+   

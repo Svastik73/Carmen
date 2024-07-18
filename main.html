@@ -8,14 +8,44 @@
     <link rel="stylesheet" href="songlist.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="icon" type="image/webp" href="image/carmen.webp">
+    <style>
+         .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #181212;
+            border-radius: 10px;
+            padding: 5px 15px;
+            color: #ccc;
+            margin-left: 15px;
+            width: 280px; /* Adjust width as needed */
+        }
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            background: transparent;
+            width: 100%;color: aliceblue; font-family: "Poppins";
+            padding: 8px;
+            transition: placeholder 1s ease-in-out;
+            font-size: 16px;
+        }
+        .search-bar input[type="text"]::placeholder {
+            color: #ccc;
+        }
+        .search-bar input[type="text"]:focus {
+            border: 1px solid #db4a34; /* Change border color on focus */
+        }
+    
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo"><img  src="image/carmen.webp" style="opacity:0.9; width:90px;height:20px;"></div>
             <h1 style="font-family:monospace"> Carmen     </h1>
+         
+    
             <div class="search-bar">
-                <input type="text" placeholder="Search..." style="border-radius: 10px; outline: none;margin-left: 15px;">
+                <input id="searchInput"type="text" placeholder="Search...🎷" style="border-radius: 10px; outline: none;margin-left: 15px;">
             </div>
         </header>
         <div class="main-content">
@@ -25,6 +55,7 @@
                     <li><a href="#singers">Singers</a></li>
                     <li><a href="#trending">Trending</a></li>
                     <li><button class="ilo" style="width: 80px;height: 40px; font-family:sans-serif; border: none;border-radius: 10px; font-size: large;">Login</button></li>
+                  
                 </ul>
             </div>
             <main>
@@ -91,12 +122,14 @@
                 <div id="music-player" class="music-player">
                   
                     <img id="banneri" alt="Song Banner" style="max-width: 100%;  max-height: 200px; height: auto; opacity: 0.8;" src="image/carmen.webp">
-                    <h3 id="banneri2" style="font-family: 'Courier New', Courier, monospace;"></h3>
-                        <audio id="audio-player" controls>
+                    <p class="erro"></p>
+                    <h3 id="banneri2" style="font-family: 'Courier New', Courier, monospace; cursor: pointer;" onmouseenter="toggleImage()"  ></h3>
+                    
+                    <audio id="audio-player"  controls >
                             <!-- Audio source will be dynamically set here -->
                             Your browser does not support the audio element.
                         </audio>
-                    
+                     
                 </div>
                 
             </main>
@@ -106,5 +139,7 @@
         </footer>
     </div>
     <script src="main.js"></script>
+    <script src="bannerimage.js"></script>
+    
 </body>
 </html>
