@@ -6,8 +6,8 @@ function showSongs(albumTitle) {
     songsList.innerHTML = '';
 if(albumTitle=='Eurovision 2024'){
     // Add songs dynamically (for demo purposes, you can replace with your data)
-    const songs = ['Hurricane', 'Zari', 'The code','Doomsday Blue','Rim Tim Tagi Dim','Teresa and Maria','Mon amour','Europapa','Jako','Özünlə Apar','La Noia'];
-    const lang=['English','Greek','English','English','English','Ukranian','French','Dutch','Armenian','Azerbaijani','Italian'];
+    const songs = ['Hurricane', 'Zari', 'The code','Doomsday Blue','Rim Tim Tagi Dim','Teresa and Maria','Mon amour','Europapa','Jako','Fighter','Özünlə Apar','La Noia'];
+    const lang=['English','Greek','English','English','English','Ukranian','French','Dutch','Armenian','French/Luxembourgish','Azerbaijani','Italian'];
    
     songs.forEach((song, index) => {
         let li=document.createElement('li');
