@@ -244,3 +244,31 @@ p{
     background: #f50202;
     color: #ffffff;
 }
+
+.section {
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .trending {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  
+  .trending::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar */
+  }
+  
+  .trending::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar */
+    border-radius: 10px; /* Roundness of the scrollbar */
+  }
+  
+  .trending-item {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  

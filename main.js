@@ -12,7 +12,7 @@ if(albumTitle=='Eurovision 2024'){
     songs.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} -  (${lang[index]})`;
-        
+        li.style.fontFamily="Poppins";
         li.addEventListener('click', () => playSong(song,lang[index])); // Pass song title to playSong function 
         songsList.appendChild(li);
     });
@@ -25,7 +25,7 @@ else if(albumTitle=='GTA')
     songs.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} - by ${lang[index]}`;
-        
+        li.style.fontFamily="Poppins";
         li.addEventListener('click', () => playSong(song,lang[index])); // Pass song title to playSong function 
         songsList.appendChild(li);
     });
@@ -36,7 +36,7 @@ else if(albumTitle=='Euro 2019'){
     eur219.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} - by ${art[index]}`;
-        
+        li.style.fontFamily="Poppins";
         li.addEventListener('click', () => playSong(song,art[index])); // Pass song title to playSong function 
         songsList.appendChild(li);
     });
