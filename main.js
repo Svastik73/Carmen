@@ -6,8 +6,8 @@ function showSongs(albumTitle) {
     songsList.innerHTML = '';
 if(albumTitle=='Eurovision 2024'){
     // Add songs dynamically (for demo purposes, you can replace with your data)
-    const songs = ['Hurricane', 'Zari', 'The code','Doomsday Blue','Rim Tim Tagi Dim','Teresa and Maria','Mon amour','Europapa','Jako','Fighter','Özünlə Apar','La Noia'];
-    const lang=['English','Greek','English','English','English','Ukranian','French','Dutch','Armenian','French/Luxembourgish','Azerbaijani','Italian'];
+    const songs = ['Hurricane', 'Zari', 'The code','Doomsday Blue','Rim Tim Tagi Dim','Teresa and Maria','Mon amour','Europapa','Jako','Fighter','Özünlə Apar','La Noia','Always on the run'];
+    const lang=['English','Greek','English','English','English','Ukranian','French','Dutch','Armenian','French/Luxembourgish','Azerbaijani','Italian','English'];
    
     songs.forEach((song, index) => {
         let li=document.createElement('li');
@@ -31,8 +31,19 @@ else if(albumTitle=='GTA')
     });
 }
 else if(albumTitle=='Euro 2019'){
-    const eur219=['She Got Me', "Toy","Arcade","Truth"]
-    const art=['- Luca Hänni ',"- Netta","- Duncan Laurence","- Chingiz Mustafayev"]
+    const eur219=['She Got Me', "Toy","Arcade","Truth","Soldi"]
+    const art=['- Luca Hänni ',"- Netta","- Duncan Laurence","- Chingiz Mustafayev","- Mahmood"]
+    eur219.forEach((song, index) => {
+        let li=document.createElement('li');
+        li.textContent = `${song} - by ${art[index]}`;
+        li.style.fontFamily="Poppins";
+        li.addEventListener('click', () => playSong(song,art[index])); // Pass song title to playSong function 
+        songsList.appendChild(li);
+    });
+}
+else if(albumTitle=='Euro Best'){
+    const eur219=['ZITTI E BUONI', "Rise Like A Phoenix","Cha Cha Cha","Stefania"]
+    const art=['- Måneskin',"- Conchita Wurst","- Käärijä","- Kalush Orchestra"]
     eur219.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} - by ${art[index]}`;

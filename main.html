@@ -34,7 +34,13 @@
         .search-bar input[type="text"]:focus {
             border: 1px solid #db4a34; /* Change border color on focus */
         }
-    
+        .video-frame {
+                          border: none;
+                          border-radius: 15px; /* Adjust the radius as per your preference */
+                          overflow: hidden;
+                          width: 420px;
+                          height: 315px;
+                        }
     </style>
 </head>
 <body>
@@ -52,8 +58,9 @@
             <div class="side-menu">
                 <ul>
                     <li><a href="#albums">Albums</a></li>
-                    <li><a href="#singers">Singers</a></li>
+                    <li><a href="#singers">Artist</a></li>
                     <li><a href="#trending">Trending</a></li>
+                    <li><a href="#trending2">New</a></li>
                     <li><button class="ilo" style="width: 80px;height: 40px; font-family:sans-serif; border: none;border-radius: 10px; font-size: large;">Login</button></li>
                   
                 </ul>
@@ -78,6 +85,11 @@
                                 <p>Eurovision 2019</p>
                                 <p style="font-size: smaller; color: grey;">Tel Aviv '19</p>
                             </div>
+                            <div class="album-item" onclick="showSongs('Euro Best')">
+                                <img src="image/Eurovision 2024/eurovision-1024x585.png" alt="Album 3" style="height: 150px;width:185px">
+                                    <p>Trends Eurovision </p>
+                                    <p style="font-size: smaller; color: grey;">Pre 2024</p>
+                                </div>
                        
                     </div>
                 </section>
@@ -130,6 +142,15 @@
                             <p style="font-size: smaller; color: grey;">Alexander Rybak</p>
                         </div>
                     </div>
+                </section>
+                <section id="trending2" class="section">
+                    <h2>New</h2>
+                    
+                      <iframe class="video-frame" width="420" height="315" 
+                              src="https://www.youtube.com/embed/bmoth7zPSyQ"></iframe>
+                              <iframe class="video-frame" width="420" height="315"  style="margin-left: 15px;" 
+                              src="https://www.youtube.com/embed/G7EMcQ3DNMc"></iframe>
+                    
                 </section>
                 <div id="song-list" class="song-list">
                     <div class="song-list-content">
