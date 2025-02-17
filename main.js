@@ -42,8 +42,8 @@ else if(albumTitle=='Euro 2019'){
     });
 }
 else if(albumTitle=='Euro Best'){
-    const eur219=['ZITTI E BUONI',"Golden Boy","Rise Like A Phoenix","Cha Cha Cha","Stefania","1944","Hard Rock Hallelujah"]
-    const art=['- Måneskin',"- Nadav Guedj","- Conchita Wurst","- Käärijä","- Kalush Orchestra","- Jamala","- Lordi"]
+    const eur219=['ZITTI E BUONI',"Golden Boy","Rise Like A Phoenix","Cha Cha Cha","Stefania","1944","Hard Rock Hallelujah","In Corpore Sano","We Could Be The Same","Trenuleţul"]
+    const art=['- Måneskin',"- Nadav Guedj","- Conchita Wurst","- Käärijä","- Kalush Orchestra","- Jamala","- Lordi","- Konstrakta","- mAnga","-  Advahov Brothers and Zdob și Zdub"]
     eur219.forEach((song, index) => {
         let li=document.createElement('li');
         li.textContent = `${song} - by ${art[index]}`;
