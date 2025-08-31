@@ -17,6 +17,19 @@ if(albumTitle=='Eurovision 2024'){
         songsList.appendChild(li);
     });
 }
+else if(albumTitle=='Eurovision 2025'){
+    // Add songs dynamically (for demo purposes, you can replace with your data)
+    const songs = ['Volevo Essere Un Duro', 'Bara Bada Bastu', 'Esa Diva','Zjerm','New Day Will Rise','Wasted Love','ICH KOMME','Run With U','Voyage','Bird Of Pray','Baller','maman','Tutta L\'Italia','La Poupée Monte Le Son','Espresso Macchiato'];
+    const lang=['- Lucio Corsi','- Kaj','- Melody','- Shkodra Elektronike','- Yuval Raphael ','- JJ','- Erica Vikman','- Mamagama','- Zoë Më','- Ziferblat','- Abor & Tynna','- Louane','- Gabry Ponte','- Laura Thorn','- Tommy Cash'];
+   
+    songs.forEach((song, index) => {
+        let li=document.createElement('li');
+        li.textContent = `${song} ${lang[index]}`;
+        li.style.fontFamily="Poppins";
+        li.addEventListener('click', () => playSong(song,lang[index])); // Pass song title to playSong function 
+        songsList.appendChild(li);
+    });
+}
 else if(albumTitle=='GTA')
 {
     const songs = ['Lady Hear Me Tonight','Radio Gaga','Music Sounds Better With You','Moves Like Jagger','The Setup','I Want It That Way','Midnight City'];
@@ -30,6 +43,7 @@ else if(albumTitle=='GTA')
         songsList.appendChild(li);
     });
 }
+
 else if(albumTitle=='Euro 2019'){
     const eur219=['She Got Me', "Toy","Arcade","Truth","Soldi"]
     const art=['- Luca Hänni ',"- Netta","- Duncan Laurence","- Chingiz Mustafayev","- Mahmood"]
@@ -55,6 +69,7 @@ else if(albumTitle=='Euro Best'){
 
     // Show the song list overlay
     document.getElementById('song-list').style.display = 'block';
+  
 }
 
 
@@ -65,6 +80,7 @@ function playSong(songTitle, langu) {
 
     const imageUrlJPEG = `image/Eurovision 2024/${songTitle}.jpeg`; // JPEG image URL
     const imageUrlJPG = `image/Eurovision 2024/${songTitle}.jpg`;   // JPG image URL
+
     const songUrl = `music/${songTitle}.mp3`;                       // Song URL
 
     // Log URLs to check if they are correct
