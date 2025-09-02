@@ -19,7 +19,7 @@ if(albumTitle=='Eurovision 2024'){
 }
 else if(albumTitle=='Eurovision 2025'){
     // Add songs dynamically (for demo purposes, you can replace with your data)
-    const songs = ['Volevo Essere Un Duro', 'Bara Bada Bastu', 'Esa Diva','Zjerm','New Day Will Rise','Wasted Love','ICH KOMME','Run With U','Voyage','Bird Of Pray','Baller','maman','Tutta L\'Italia','La Poupée Monte Le Son','Espresso Macchiato'];
+    const songs = ['Volevo Essere Un Duro', 'Bara Bada Bastu', 'Esa Diva','Zjerm','New Day Will Rise','Wasted Love','ICH KOMME','Run With U','Voyage','Bird of Pray','Baller','maman','Tutta L\'Italia','La Poupée Monte Le Son','Espresso Macchiato'];
     const lang=['- Lucio Corsi','- Kaj','- Melody','- Shkodra Elektronike','- Yuval Raphael ','- JJ','- Erica Vikman','- Mamagama','- Zoë Më','- Ziferblat','- Abor & Tynna','- Louane','- Gabry Ponte','- Laura Thorn','- Tommy Cash'];
    
     songs.forEach((song, index) => {
